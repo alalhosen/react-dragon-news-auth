@@ -1,9 +1,21 @@
+import { GrGoogle } from "react-icons/gr";
+
 const RightSideNav = () => {
   return (
-    <button className="btn">
-      
-      Button
-    </button>
+    <div>
+      <div>
+        <button className="btn">
+          <GrGoogle></GrGoogle>
+          Button
+        </button>
+      </div>
+      <div>
+        <button className="btn">
+          <GrGoogle></GrGoogle>
+          Button
+        </button>
+      </div>
+    </div>
   );
 };
 
