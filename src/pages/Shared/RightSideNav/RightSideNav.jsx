@@ -1,8 +1,9 @@
 const RightSideNav = () => {
   return (
-    <div>
-      <h2 className="text-2xl">RightSideNav</h2>
-    </div>
+    <button className="btn">
+      
+      Button
+    </button>
   );
 };
 
