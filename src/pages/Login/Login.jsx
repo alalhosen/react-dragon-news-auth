@@ -5,7 +5,7 @@ const Login = () => {
     <div>
       <Navbar></Navbar>
       <h2 className="text-3xl">This is Login</h2>
-      <form className="card-body">
+      <form className="md:w-3/4 lg:w-1/2">
         <div className="form-control">
           <label className="label">
             <span className="label-text">Email</span>

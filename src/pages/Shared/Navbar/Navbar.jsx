@@ -12,6 +12,9 @@ const Navbar = () => {
       <li>
         <NavLink to="/career">Career</NavLink>
       </li>
+      <li>
+        <NavLink to="/login">Login</NavLink>
+      </li>
     </>
   );
 
@@ -54,7 +57,7 @@ const Navbar = () => {
             src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
         </div>
       </div>
-        <Link>
+        <Link to="login">
           <button className="btn">Login</button>
         </Link>
       </div>
