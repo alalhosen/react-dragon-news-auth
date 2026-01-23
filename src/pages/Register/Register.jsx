@@ -6,7 +6,11 @@ const Register = () => {
     e.preventDefault();
     console.log(e.currentTarget);
     const form = new FormData(e.currentTarget);
-    console.log(form.get("password"));
+    const name = form.get("name");
+    const photo = form.get("photo");
+    const email = form.get("email");
+    const password = form.get("password");
+    console.log(name, photo, email, password);
   };
   return (
     <div>
@@ -14,6 +18,30 @@ const Register = () => {
       <div>
         <h2 className="text-3xl text-center">Please Register</h2>
         <form onSubmit={handleRegister} className="md:w-3/4 lg:w-1/2 mx-auto">
+          <div className="form-control">
+            <label className="label">
+              <span className="label-text">Name</span>
+            </label>
+            <input
+              type="text"
+              placeholder="Name"
+              name="name"
+              className="input input-bordered"
+              required
+            />
+          </div>
+          <div className="form-control">
+            <label className="label">
+              <span className="label-text">Photo</span>
+            </label>
+            <input
+              type="text"
+              placeholder="Photo URL"
+              name="photo"
+              className="input input-bordered"
+              required
+            />
+          </div>
           <div className="form-control">
             <label className="label">
               <span className="label-text">Email</span>
@@ -48,8 +76,9 @@ const Register = () => {
           </div>
         </form>
         <p className="text-center mt-3">
-          Already have an account. Please <Link to="/login" className="text-blue-600 font-bold">
-             Login
+          Already have an account. Please{" "}
+          <Link to="/login" className="text-blue-600 font-bold">
+            Login
           </Link>
         </p>
       </div>
@@ -58,3 +87,4 @@ const Register = () => {
 };
 
 export default Register;
+
