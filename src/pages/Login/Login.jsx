@@ -1,12 +1,18 @@
 import { Link } from "react-router-dom";
 import Navbar from "../Shared/Navbar/Navbar";
+import { useContext } from "react";
+import { AuthConText } from "../../providers/AuthProvider";
 
 const Login = () => {
+  const { signIn } = useContext(AuthConText);
+
   const handleLogin = (e) => {
     e.preventDefault();
     console.log(e.currentTarget);
     const form = new FormData(e.currentTarget);
-    console.log(form.get("password"));
+    const email = form.get("email");
+    const password = form.get("password");
+    console.log(email, password);
   };
 
   return (
@@ -49,7 +55,8 @@ const Login = () => {
           </div>
         </form>
         <p className="text-center mt-3">
-          Do not have an accout. Please <Link to="/register" className="text-blue-600 font-bold">
+          Do not have an accout. Please{" "}
+          <Link to="/register" className="text-blue-600 font-bold">
             Register
           </Link>
         </p>
