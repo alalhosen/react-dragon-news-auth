@@ -17,13 +17,13 @@ const Register = () => {
     console.log(name, photo, email, password);
 
     // create user
-    createUser(email,password)
-    .then(result=>{
-      console.log(result.user)
-    })
-    .catch(error=>{
-      console.error(error)
-    })
+    createUser(email, password)
+      .then((result) => {
+        console.log(result.user);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
   };
   return (
     <div>
